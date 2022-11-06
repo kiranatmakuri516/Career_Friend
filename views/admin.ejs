@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+        
+        #navbar {
+            margin-top: 0px;
+            background-color: aquamarine;
+            width: 100%;
+            height: 10vh;
+            opacity: 2;
+        }
+        
+        #logo {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            font-weight: 700;
+            font-style: bold;
+            float: left;
+            padding-left: 10px;
+            margin: 5px;
+        }
+        
+        #links {
+            display: flexbox;
+            align-items: right;
+            text-align: right;
+        }
+        
+        a {
+            color: black;
+            font-style: bold;
+            font-size: 20px;
+        }
+        
+        a:hover {
+            background-color: pink;
+            scale: 1.1;
+        }
+        
+        li {
+            float: right;
+            margin: 9px;
+            display: inline;
+            text-decoration: none;
+            letter-spacing: 1px;
+            padding-right: 1px;
+            font-style: bold;
+            font-weight: 300;
+        }
+        
+        body {
+            background-color: #D6EFED;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .heading {
+            text-align: center;
+            font-size: 40px;
+            padding: 20px 0;
+            padding-top: 50px;
+            color: rgb(18, 97, 225);
+        }
+        
+        #adminform {
+            text-align: center;
+            justify-content: center;
+            border-radius: 10 px solid black;
+            width: fit-content
+        }
+        
+        form {
+            text-align: center;
+            justify-content: center;
+        }
+        
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="links">
+            <a href="/admin">
+                <p id="logo">CAREER FRIEND</p>
+            </a>
+            <ul>
+                <li><a href="/feedback" id="a1">Feedback</a></li>
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="#vacancy">Vacancy</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </div>
+    <center>
+        <div class="heading">ADD VACANCY</div>
+        <div id="adminform">
+            <form action="/" method="post">
+                <table>
+                    <center>
+                        <tr>
+                            <td>Company Name</td>
+                            <td><input type="text" name="f_title" required></td>
+                        </tr>
+                        <tr>
+                            <td>Job Role</td>
+                            <td><input type="text" name="f_role" required></td>
+                        </tr>
+                        <tr>
+                            <td>Last date</td>
+                            <td><input type="date" name="f_date" required></td>
+                        </tr>
+                        <tr>
+                            <td>Enter Location</td>
+                            <td><input type="text" name="f_loc" required></td>
+                        </tr>
+                        <tr>
+                            <td>Logo Url</td>
+                            <td><input type="text" name="f_img" required></td>
+                        </tr>
+                        <tr>
+                            <td>Description Url</td>
+                            <td><input type="text" name="f_des" required></td>
+                        </tr>
+                    </center>
+                </table>
+                <input type="submit" value="Add Job" style="cursor:pointer;">
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>

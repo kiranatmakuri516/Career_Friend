@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resources</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+        }
+        
+        #navbar {
+            margin-top: 0px;
+            background-color: aquamarine;
+            width: 100%;
+            height: 10vh;
+            opacity: 2;
+        }
+        
+        #logo {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+            font-weight: 700;
+            font-style: bold;
+            float: left;
+            padding-left: 10px;
+            margin: 5px;
+        }
+        
+        #links {
+            display: flexbox;
+            align-items: right;
+            text-align: right;
+        }
+        
+        a {
+            color: black;
+            font-style: bold;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            background-color: pink;
+            scale: 1.1;
+        }
+        
+        li {
+            float: right;
+            margin: 7px;
+            display: inline;
+            text-decoration: none;
+            letter-spacing: 1px;
+            padding-right: 1px;
+            font-style: bold;
+            font-weight: 300;
+        }
+        
+        body {
+            background-color: #D6EFED;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        #skills {
+            background: url("images/backg2.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: relative;
+        }
+        
+        .vacancy-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .vacancy-container .vacancy-title,
+        .vacancy-container .vacancu-content {
+            max-width: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .vacancy-container .vacancy-box {
+            background-color: aliceblue;
+            border-radius: 10px;
+            height: 300px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: 0 0 10px greenyellow;
+        }
+        
+        .vacancy-container .vacancy-title {
+            margin-bottom: 12px;
+        }
+        
+        .vacancy-container .vacancy-box .vacancy-img {
+            width: 150px;
+            height: 150px;
+        }
+        
+        .vacancy-box .vacancy-img img {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            transition: transform 0.2s linear;
+            box-shadow: 0 0 10px black;
+        }
+        
+        .vacancy-img img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        
+        .vacancy-title .vacancy-img h2 {
+            position: static;
+            font-size: 20px;
+        }
+        
+        .vacancy-container .vacancy-content i {
+            color: rgb(67, 61, 61);
+        }
+        
+        .heading {
+            text-align: center;
+            font-size: 40px;
+            padding: 20px 0;
+            padding-top: 50px;
+            color: rgb(18, 97, 225);
+        }
+        
+        p {
+            font-style: bold;
+            font-size: 20px;
+        }
+        
+        #apply {
+            background-color: aqua;
+            border-radius: 2px black solid;
+        }
+        
+        img {
+            width: 275px;
+            height: 200px;
+            border-radius: 50% red;
+        }
+        
+        #r1 {
+            border-radius: 50%;
+            margin: 20px;
+        }
+        
+        #search {
+            margin: 20px;
+            text-align: right;
+            justify-content: right;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="links">
+            <a href="/admin">
+                <p id="logo">CAREER FRIEND</p>
+            </a>
+            <ul>
+                <li><a href="/feedback" id="a1">Feedback</a></li>
+                <li><a href="/#resources">Resources</a></li>
+                <li><a href="#vacancy">Vacancy</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="vacancy">
+        <div class="heading">VACANCIES</div>
+        <form action="/morevacancy" method="post">
+            <div id="search">
+                <input type="text" name="searchbar">
+                <input type="submit" name="submit1" value="Search">
+            </div>
+        </form>
+        <div class="vacancy-container">
+            <% const a=new Date(); %>
+                <% const b=a.getDate(); %>
+                    <% const c=a.getMonth(); %>
+                        <% const d=a.getFullYear(); %>
+                            <% for(var i=0;i<vac.length;i++){ %>
+                                <% const a1=new Date(vac[i].date); %>
+                                    <% const b1=a1.getDate(); %>
+                                        <% const c1=a1.getMonth(); %>
+                                            <% const d1=a1.getFullYear(); %>
+                                                <% var flag=0; %>
+                                                    <%if(d1>d){ %>
+                                                        <% flag=1; %>
+                                                            <% } %>
+                                                                <% if(d1==d) { %>
+                                                                    <% if(c1>c) { %>
+                                                                        <% flag=1; %>
+                                                                            <% } %>
+                                                                                <% if(c1==c) { %>
+                                                                                    <% if(b1>=b) { %>
+                                                                                        <% flag=1; %>
+                                                                                            <% } %>
+                                                                                                <% } %>
+                                                                                                    <% } %>
+                                                                                                        <% if(flag==1) { %>
+                                                                                                            <div class="vacancy-box boxx">
+                                                                                                                <div class="vacancy-title">
+                                                                                                                    <div class="vacancy-img">
+                                                                                                                        <img src="<%= vac[i].img %>" alt="image">
+                                                                                                                        <h2>
+                                                                                                                            <%=
+                                                                                                                                    vac[i].title%>
+                                                                                                                        </h2>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="vacancy-content">
+                                                                                                                    <br><br>
+                                                                                                                    <p>Role:
+                                                                                                                        <%= vac[i].role
+                                                                                                                                %>
+                                                                                                                            <br>
+                                                                                                                    </p>
+                                                                                                                    <p>Location:
+                                                                                                                        <%= vac[i].loc
+                                                                                                                                %>
+                                                                                                                            <br>
+                                                                                                                    </p>
+                                                                                                                    <p>Last date:
+                                                                                                                        <%= vac[i].date
+                                                                                                                                %>
+                                                                                                                            <br>
+                                                                                                                    </p>
+                                                                                                                    <center>
+                                                                                                                        <p><a href="<%= vac[i].des %>" id="apply">Apply</a>
+                                                                                                                        </p>
+                                                                                                                    </center>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <% } %>
+                                                                                                                <% } %>
+                                                                                                                    <% if(i==0){%>
+                                                                                                                        <BR>
+                                                                                                                        <BR>
+                                                                                                                        <BR>
+                                                                                                                        <BR>
+                                                                                                                        <h1>VACANCIES NOT AVAILABLE</h1>
+                                                                                                                        <% } %>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

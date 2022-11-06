@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #ptitle {
+            text-align: center;
+            align-items: center;
+            font-size: 50px;
+            font-family: serif;
+            color: transparent;
+            text-align: center;
+            animation: effect 2s linear infinite;
+        }
+        
+        @keyframes effect {
+            0% {
+                background: linear-gradient( #008000, #00FF00);
+                -webkit-background-clip: text;
+            }
+            100% {
+                background: linear-gradient( #3CE7D7, #000FFF);
+                -webkit-background-clip: text;
+            }
+            100% {
+                background: linear-gradient(#FF06B7, #F6C6EA);
+                -webkit-background-clip: text;
+            }
+        }
+        
+        #div1 {
+            border: solid black;
+            width: 15%;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 0%;
+            padding-bottom: 5%;
+            border-radius: 5px;
+            background-image: url(https://wallpaperaccess.com/full/1900901.jpg);
+            position: center;
+            margin-left: 30%;
+            margin-top: 5%;
+            align-items: center;
+            justify-items: center;
+            border-style: double;
+            box-shadow: 0 0 30px #fff;
+            background-blend-mode: darken;
+        }
+        
+        #signin {
+            border: solid black;
+            width: auto;
+            height: auto;
+            border-width: 2px;
+            border-radius: 5px;
+            background-color: skyblue;
+        }
+        
+        #main {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent), url(https://wallpaperaccess.com/full/1900901.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #name {
+            width: 80%;
+            box-shadow: 0 0 10px red;
+        }
+        
+        #pwd {
+            width: 80%;
+            box-shadow: 0 0 10px red;
+        }
+        
+        #signup {
+            text-align: right;
+            position: inline;
+            font-style: oblique;
+            font-size: 20px;
+            color: darkorange;
+            padding-left: 50%;
+        }
+        
+        #create {
+            font-size: 23px;
+            color: black;
+        }
+        
+        #create:hover {
+            font-size: 25px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body id="main">
+    <div id="div1">
+        <form action="/login" method="post">
+            <center>
+                <img src="https://static.thenounproject.com/png/178831-200.png" width="50%">
+                <h2 align="center">USERNAME</h2>
+                <input type="text" name="name" required><br>
+                <h2 align="center">PASSWORD</h2>
+                <input type="password" name="pwd" required><br><br>
+                <input type="submit" id="signin" value="Login">
+            </center>
+            <br>
+            <div id="signup">
+                New User?<br>
+                <a href="/signup" style="text-decoration:none" id="create">Sign up</a>
+            </div>
+        </form>
+    </div>
+    <div id="delay">
+        <% if(dummy===1){ %>
+            <script>
+                alert("LOGIN TO ENTER");
+            </script>
+            <% } %>
+    </div>
+    <script>
+        setTimeout(function() {
+            $('#delay').show();
+        }, 5000);
+    </script>
+</body>
+
+</html>

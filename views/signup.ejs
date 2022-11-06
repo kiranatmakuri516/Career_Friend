@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        SIGN UP
+    </title>
+    <style>
+        #main {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent), url(https://wallpaperaccess.com/full/1900901.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #div1 {
+            border: solid black;
+            width: 20%;
+            border-radius: 5px;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 0%;
+            padding-bottom: 5%;
+            background-image: url(https://wallpaperaccess.com/full/1900901.jpg);
+            position: center;
+            margin-left: 30%;
+            margin-top: 3%;
+            align-items: center;
+            justify-items: center;
+            border-style: double;
+            box-shadow: 0 0 30px #fff;
+            background-blend-mode: darken;
+        }
+        
+        #name {
+            width: 80%;
+            box-shadow: 0 0 20px red;
+        }
+        
+        #email {
+            width: 80%;
+            box-shadow: 0 0 20px red;
+        }
+        
+        #number {
+            width: 80%;
+            box-shadow: 0 0 20px red;
+        }
+        
+        #pwd {
+            width: 80%;
+            box-shadow: 0 0 20px red;
+        }
+    </style>
+</head>
+
+<body id="main">
+
+    <div id="div1">
+        <form action="/signup" method="post">
+            <center>
+                <img src="https://static.thenounproject.com/png/178831-200.png" width="50%">
+                <h2>NAME</h2>
+                <input type="text" name="user"><br>
+                <h2>EMAIL ID</h2>
+                <input type="email" name="email"><br>
+                <h2>NUMBER</h2>
+                <input type="text" name="number"><br>
+                <h2>PASSWORD</h2>
+                <input type="password" name="password"><br><br>
+                <input type="submit" value="Sign up" name="signup">
+            </center>
+        </form>
+    </div>
+</body>
+
+</html>
